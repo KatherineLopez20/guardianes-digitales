@@ -1,0 +1,49 @@
+
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    transition: left 0.3s;
+    overflow-y: auto;
+    background: linear-gradient(to right, #4e73df, #2e59d9); /* Fondo degradado azul */
+    color: #5318e9; /* Color del texto blanco */
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.main-content {
+    transition: margin-left 0.3s;
+}
+
+.sidebar-sticky {
+    padding-top: 120px; /* Ajuste para que el contenido no quede detrás del botón */
+}
+
+.nav-link {
+    padding: 8px 16px; /* Ajuste de espaciado para los enlaces del menú */
+    text-align: left; /* Alineación del texto del menú */
+    color: #fff; /* Color del texto blanco */
+}
+.nav-link:hover {
+    color: #03123a; /* Cambiar a un azul turquesa al pasar el cursor */
+}
+.section {
+    display: none;
+    padding-left: 20px; /* Espacio para los subtemas */
+}
+
+.section.active {
+    display: block;
+}

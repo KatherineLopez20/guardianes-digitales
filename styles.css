@@ -1,5 +1,3 @@
-
-
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -46,4 +44,27 @@
 
 .section.active {
     display: block;
+}
+
+
+
+/*estilo actividad contraseñas seguras */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.activity {
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 10%; /* Añadido margen superior para separación */
 }

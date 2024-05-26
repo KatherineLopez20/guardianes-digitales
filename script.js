@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener referencia al botón de iniciar curso
+    var btnIniciarCurso = document.getElementById('btn-iniciar-curso');
+
+    // Agregar evento de clic al botón de iniciar curso
+    btnIniciarCurso.addEventListener('click', function() {
+        // Ocultar la página de inicio
+        document.getElementById('pagina-inicio').style.display = 'none';
+        // Mostrar la sección del curso
+        document.getElementById('curso').style.display = 'block';
+    });
+});
+
 document.querySelectorAll('.nav-link').forEach(function(link) {
     link.addEventListener('click', function(event) {
         event.preventDefault(); // Evitar la acción predeterminada del enlace
@@ -16,3 +29,35 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
         document.querySelector('.main-content').style.marginLeft = '0';
     }
 });
+
+
+// actividad contraseñas seguras 
+function evaluatePassword() {
+    var password = document.getElementById("passwordInput").value;
+    var result = document.getElementById("result");
+    var strength = getPasswordStrength(password);
+    
+    if (strength === 'strong') {
+        result.textContent = "Contraseña fuerte";
+        result.style.color = "green";
+    } else if (strength === 'medium') {
+        result.textContent = "Contraseña media";
+        result.style.color = "orange";
+    } else {
+        result.textContent = "Contraseña débil";
+        result.style.color = "red";
+    }
+}
+
+function getPasswordStrength(password) {
+    var strongPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})");
+    var mediumPassword = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+
+    if (strongPassword.test(password)) {
+        return 'strong';
+    } else if (mediumPassword.test(password)) {
+        return 'medium';
+    } else {
+        return 'weak';
+    }
+}

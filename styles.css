@@ -1,3 +1,4 @@
+/*  MENU  DESPLEGABLE */
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -13,8 +14,8 @@
     width: 220px;
     transition: left 0.3s;
     overflow-y: auto;
-    background: linear-gradient(to right, #4e73df, #2e59d9); /* Fondo degradado azul */
-    color: #5318e9; /* Color del texto blanco */
+    background: linear-gradient(to right, #32CD32 , #32CD32 ); /* Fondo degradado azul */
+    color: #00FFFF ; /* Color del texto blanco */
 }
 
 .sidebar.show {
@@ -24,6 +25,8 @@
 .main-content {
     transition: margin-left 0.3s;
 }
+
+/* CONTENIDO DEL MENU  */
 
 .sidebar-sticky {
     padding-top: 120px; /* Ajuste para que el contenido no quede detrás del botón */
@@ -47,8 +50,8 @@
 }
 
 
+/*ESTILO ACTIVIDAD DE CONTRASEÑAS SEGURAS  */
 
-/*estilo actividad contraseñas seguras */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -66,5 +69,13 @@ body {
 .activity {
     max-width: 85%;
     margin: 0 auto;
-    margin-top: 10%; /* Añadido margen superior para separación */
+    margin-top: 20%; /* Añadido margen superior para separación */
 }
+
+
+ /* Clase para indicar que un tema está completado */
+ /*.completed {
+    color: green !important;
+}
+
+ 

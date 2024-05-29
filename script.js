@@ -61,3 +61,24 @@ function getPasswordStrength(password) {
         return 'weak';
     }
 }
+
+
+// 
+$(document).ready(function(){
+    // Escucha los clics en los enlaces del menú lateral
+    $('.nav-link').on('click', function(event){
+        // Evita el comportamiento predeterminado del enlace
+        event.preventDefault();
+        // Obtiene el ID del destino del enlace
+        var target = $(this).attr('href');
+        // Oculta todas las secciones de contenido
+        $('.section').removeClass('active');
+        // Muestra la sección de contenido correspondiente al enlace
+        $(target).addClass('active');
+        // Marca el enlace como completado
+        $(this).addClass('completed');
+        // Oculta el título del curso
+        $('#titulo-curso').hide();
+      
+    });
+});
